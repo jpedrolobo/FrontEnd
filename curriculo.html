@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo - João Lob</title>
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --ring: rgba(99, 102, 241, 0.25);
+    }
+    * {box-sizing: border-box;}
+    html, body {height: 100%;}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 16px 24px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,.05);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .tagline {
+      font-size: 14px;
+      color: var(--muted);
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    section.card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+    section.card h2 {
+      margin-top: 0;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #111827;
+    }
+    .field-label {
+      font-weight: 600;
+      font-size: 14px;
+      color: #374151;
+      margin: 8px 0 6px;
+    }
+    .readonly, .editable {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #f9fafb;
+    }
+    .editable {
+      background: #fff;
+      border-color: #d1d5db;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    @media (max-width: 800px) {
+      main { grid-template-columns: 1fr; }
+      header { flex-direction: column; align-items: flex-start; }
+      .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>João Lobo</h1>
+        <div class="tagline">Currículo — Espaços para preencher</div>
+      </div>
+      <div aria-label="Contato">
+        <label class="field-label" for="email">Email / Contato</label><br />
+        <input class="editable" type="email" id="email" placeholder="exemplo@domínio.com" />
+      </div>
+    </header>
+
+    <main>
+      <!-- Coluna 1: Quem sou eu / Objetivo -->
+      <section class="card" aria-labelledby="quem-sou">
+        <h2 id="quem-sou">Quem sou eu</h2>
+        <textarea class="editable" id="quem-sou-text" rows="8" placeholder="Escreva um breve resumo sobre quem você é, suas skills e valores."></textarea>
+      </section>
+
+      <section class="card" aria-labelledby="objetivo">
+        <h2 id="objetivo">Objetivo profissional</h2>
+        <textarea class="editable" id="objetivo-text" rows="8" placeholder="Descreva seu objetivo de carreira, cargos desejados, áreas de atuação, etc."></textarea>
+      </section>
+
+      <!-- Coluna 2: Experiências / Formação (ajuste conforme necessidade) -->
+      <section class="card" aria-labelledby="experiencias">
+        <h2 id="experiencias">Experiências</h2>
+        <textarea class="editable" id="experiencias-text" rows="14" placeholder="Liste suas experiências profissionais relevantes, com empresa, cargo, período e destaques."></textarea>
+      </section>
+
+      <section class="card" aria-labelledby="contato">
+        <h2 id="contato">Contato</h2>
+        <label class="field-label" for="nome">Nome</label>
+        <input class="editable" type="text" id="nome" placeholder="Seu nome completo" />
+        <label class="field-label" for="telefone" style="margin-top:8px;">Telefone</label>
+        <input class="editable" type="tel" id="telefone" placeholder="(XX) XXXXX-XXXX" />
+        <label class="field-label" for="email2" style="margin-top:8px;">Email</label>
+        <input class="editable" type="email" id="email2" placeholder="seu.email@dominio.com" />
+      </section>
+
+    
+      </section>
+    </main>
+
+  </div>
+</body>
+</html>
